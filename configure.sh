@@ -125,9 +125,9 @@ else
   fi
 fi
 
-
-TF_CFLAGS=( $(python3 -c 'import tensorflow as tf; print(" ".join(tf.sysconfig.get_compile_flags()))') )
-TF_LFLAGS="$(python3 -c 'import tensorflow as tf; print(" ".join(tf.sysconfig.get_link_flags()))')"
+# changed to python (from python3)
+TF_CFLAGS=( $(python -c "import tensorflow as tf; print(' '.join(tf.sysconfig.get_compile_flags()))") )
+TF_LFLAGS="$(python -c "import tensorflow as tf; print(' '.join(tf.sysconfig.get_link_flags()))")"
 
 write_to_bazelrc "build:cuda --define=using_cuda=true --define=using_cuda_nvcc=true"
 if [[ "$PIP_MANYLINUX2010" == "0" ]]; then
