@@ -14,7 +14,7 @@
 # limitations under the License.
 # ==============================================================================
 PLATFORM="$(uname -s | tr 'A-Z' 'a-z')"
-PIP="pip3"
+PIP="pip"
 
 function write_to_bazelrc() {
   echo "$1" >> .bazelrc
