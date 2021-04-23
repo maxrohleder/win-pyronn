@@ -47,7 +47,7 @@ Test if tensorflow can reach the gpu:
 python -c "import tensorflow as tf;tf.config.list_physical_devices('GPU')"
 ```
 
-6. fix a tensorflow bug
+6. fix a tensorflow bug (reason for this https://github.com/maxrohleder/win-pyronn/issues/4)
 
 Locate the `Tensor` file and delete the `#include <unistd.h>` line. For my conda python installation it was located here
 `C:\Users\maxrohleder\Miniconda3\envs\tftest2\Lib\site-packages\tensorflow\include\unsupported\Eigen\CXX11\Tensor`
