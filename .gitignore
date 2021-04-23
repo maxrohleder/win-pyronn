@@ -1,6 +1,13 @@
+# ignore compilation folders and files
 bazel-bin
 bazel-out
 bazel-testlogs
-.bazelrc
-artifacts
 bazel-win-pyronn
+.bazelrc
+
+# folder for final .whl files
+artifacts
+
+
+# IDE files
+.idea
