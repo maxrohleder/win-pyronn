@@ -42,17 +42,35 @@ BAZEL_VC_FULL_VERSION      14.26.28801
 conda create -n "pyronn" python==3.8 tensorflow-gpu==2.3
 conda activate pyronn
 ```
+Test if tensorflow can reach the gpu:
+```shell
+python -c "import tensorflow as tf;tf.config.list_physical_devices('GPU')"
+```
 
-5. build the layers directly from this repository (already includes some fixes)
+6. fix a tensorflow bug
+
+Locate the `Tensor` file and delete the `#include <unistd.h>` line. For my conda python installation it was located here
+`C:\Users\maxrohleder\Miniconda3\envs\tftest2\Lib\site-packages\tensorflow\include\unsupported\Eigen\CXX11\Tensor`
+
+The line is located in line 74 and should not be included on Windows as it is posix...
+
+7. build the layers directly from this repository (already includes some fixes)
 ```shell
 git clone https://github.com/maxrohleder/win-pyronn
 bash configure.sh
-bazel build build_pip_pkg --verbose_failures
+bazel build --enable-runfiles build_pip_pkg --verbose_failures
 ```
-   
 
+8. create the pip archive `.whl` file and install it
+
+```shell
+bazel-bin/build_pip_pkg artifacts
+pip install ./artifacts/<some-generated-name>.whl
+```
 
 ### Troubleshooting and Changelog
+
+Search the [issues section](https://github.com/maxrohleder/win-pyronn/issues?q=is%3Aissue) of this repository to find more answers.
 
 #### cant find MSVC 
 
