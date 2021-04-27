@@ -5,13 +5,25 @@ Use the install instructions to install one of the provided builds, or follow th
 
 ## Install with pip
 
-- create a python env with python 3.6 (I use conda for env management here, but you can use any python env with python 3.6 installed)
+- create a python env with python 3.6 (I use conda for env management here, but any python 3.6 will do)
 
 `conda create -n "pyronn" python=3.6`
 
-- use the requirements.txt file to install along wiht all necessary dependencies
+- use the supplied requirements.txt file to install pyronn along with all necessary dependencies
 
 `pip install -r https://raw.githubusercontent.com/maxrohleder/win-pyronn/master/requirements.txt`
+
+- the approach above guarantees, that all deps are fitting. Alternatively, you can install the major dependecies by hand:
+
+```
+- python 3.6
+- matplotlib 3.3.4
+- tensorflow 2.4.1
+- pyronn 0.1.0
+```
+Then install the v0.1.0 release with
+
+`pip install https://github.com/maxrohleder/win-pyronn/releases/download/v0.1.0/pyronn_layers-0.1.0-cp36-cp36m-win_amd64.whl`
 
 ## A step-by-step guide
 
