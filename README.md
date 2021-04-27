@@ -5,7 +5,7 @@ Use the install instructions to install one of the provided builds, or follow th
 
 ## Install with pip
 
-- create a python env with python 3.6 
+- create a python env with python 3.6 (I use conda for env management here, but you can use any python env with python 3.6 installed)
 
 `conda create -n "pyronn" python=3.6`
 
