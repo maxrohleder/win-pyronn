@@ -11,7 +11,7 @@ Use the install instructions to install one of the provided builds, or follow th
 
 - use the requirements.txt file to install along wiht all necessary dependencies
 
-`pip install -r https://github.com/maxrohleder/win-pyronn/blob/master/requirements.txt`
+`pip install -r https://raw.githubusercontent.com/maxrohleder/win-pyronn/master/requirements.txt`
 
 ## A step-by-step guide
 
