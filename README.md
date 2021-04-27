@@ -1,12 +1,25 @@
 # PyroNN layers as a tf custom op
 
+This repository contains the pyronn layers configured as a tf-custom ops for windows. 
+Use the install instructions to install one of the provided builds, or follow the step-by-step guide to build for your own system.
+
+## Install with pip
+
+- create a python env with python 3.6 
+
+`conda create -n "pyronn" python=3.6`
+
+- use the requirements.txt file to install along wiht all necessary dependencies
+
+`pip install -r https://github.com/maxrohleder/win-pyronn/blob/master/requirements.txt`
+
+## A step-by-step guide
+
 As the [custom_ops readme](https://github.com/tensorflow/custom-op) offers very limited support for building a custom
 layer on windows, I decided to create my own and thoroughly document the build process of 
 the [pyroNN layers](https://github.com/csyben/PYRO-NN-Layers).
 
 I spent a lot of time on this issue, so here are the exact steps I used to compile the framework.
-
-### A step-by-step guide
 
 Make sure to use one of the tested combinations of build tools and dependencies listed [here](https://www.tensorflow.org/install/source_windows?hl=en#gpu).
 
