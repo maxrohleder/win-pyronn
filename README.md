@@ -47,9 +47,9 @@ ________________________________________________________________________________
 1. download bazel 3.1.0, unzip it to some folder and add it to path (its just one executable)
 https://github.com/bazelbuild/bazel/releases/tag/3.1.0
 
-2. install cuda 10.1 and cudnn 7.6
+2. install cuda 10.1 and cudnn 7.6.5
 https://developer.nvidia.com/cuda-10.1-download-archive-base
-https://developer.nvidia.com/rdp/cudnn-archive  <-- (have to make an nvidia dev account)
+https://developer.nvidia.com/rdp/cudnn-archive  <-- (have to make an nvidia dev account [direct link](https://developer.nvidia.com/compute/machine-learning/cudnn/secure/7.6.5.32/Production/10.1_20191031/cudnn-10.1-windows10-x64-v7.6.5.32.zip))
 
 3. unpack cudnn into the cuda folder
 https://medium.com/vitrox-publication/deep-learning-frameworks-tensorflow-build-from-source-on-windows-python-c-cpu-gpu-d3aa4d0772d8
