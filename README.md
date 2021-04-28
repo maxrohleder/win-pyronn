@@ -20,11 +20,9 @@ Use the install instructions to install one of the provided builds, or follow th
 - matplotlib 3.3.4
 - tensorflow 2.4.1
 - pyronn 0.1.0
+Then:
+- pip install https://github.com/maxrohleder/win-pyronn/releases/download/v0.1.0/pyronn_layers-0.1.0-cp36-cp36m-win_amd64.whl
 ```
-Then install the v0.1.0 release with
-
-`pip install https://github.com/maxrohleder/win-pyronn/releases/download/v0.1.0/pyronn_layers-0.1.0-cp36-cp36m-win_amd64.whl`
-
 ## A step-by-step guide
 
 As the [custom_ops readme](https://github.com/tensorflow/custom-op) offers very limited support for building a custom
@@ -64,8 +62,9 @@ BAZEL_VC_FULL_VERSION      14.26.28801
    
 5. create a python env with suitable tensorflow
 ```bash
-conda create -n "pyronn" python==3.8 tensorflow-gpu==2.3
+conda create -n "pyronn" python=3.6
 conda activate pyronn
+pip install tensorflow-gpu==2.4.1
 ```
 Test if tensorflow can reach the gpu:
 ```shell
