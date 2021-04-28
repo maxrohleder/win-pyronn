@@ -31,7 +31,7 @@ As the [custom_ops readme](https://github.com/tensorflow/custom-op) offers very 
 layer on windows, I decided to create my own and thoroughly document the build process of 
 the [pyroNN layers](https://github.com/csyben/PYRO-NN-Layers).
 
-I spent a lot of time on this issue, so here are the exact steps I used to compile the framework.
+I spent a lot of time on this issue, so here are the exact steps I used to compile the framework. I used `powershell` with `Msys2` in my path to support the linux commands used by the build toolchain.
 
 Make sure to use one of the tested combinations of build tools and dependencies listed [here](https://www.tensorflow.org/install/source_windows?hl=en#gpu).
 
