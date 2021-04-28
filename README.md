@@ -81,7 +81,8 @@ The line is located in line 74 and should not be included on Windows as it is po
 
 7. build the layers directly from this repository (already includes some fixes)
 ```shell
-git clone https://github.com/maxrohleder/win-pyronn
+git clone --recurse-submodules https://github.com/maxrohleder/win-pyronn win-pyronn
+cd win-pyronn
 bash configure.sh
 bazel build --enable-runfiles build_pip_pkg --verbose_failures
 ```
@@ -126,6 +127,16 @@ to
 TF_CFLAGS=( $(python -c "import tensorflow as tf; print(' '.join(tf.sysconfig.get_compile_flags()))") )
 TF_LFLAGS="$(python -c "import tensorflow as tf; print(' '.join(tf.sysconfig.get_link_flags()))")"
 ```
+
+#### Cant find `_pyronn_layers_ops.so`
+
+The tensorflow library loader gets confused, if you run the python script from within the build folder. 
+Make sure to use a new project, such that tensorflow searches the `.so` file in the site-packages of your python env.
+
+#### This wheel is not compatible with this plattform
+
+The released binary was built against `python 3.6` and `tensorflow 2.4.1` you need to install that via pip, as conda
+does not yet provide the latest tf version. (April 2021)
 
 
 
