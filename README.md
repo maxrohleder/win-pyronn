@@ -33,14 +33,12 @@ I spent a lot of time on this issue, so here are the exact steps I used to compi
 
 Make sure to use one of the tested combinations of build tools and dependencies listed [here](https://www.tensorflow.org/install/source_windows?hl=en#gpu).
 
-```md
-____________________________________________________________________________________
-Version	                Python version	  Compiler	   Build tools    cuDNN	  CUDA
-tensorflow_gpu-2.4.0	3.6-3.8	          MSVC 2019	   Bazel 3.1.0	  8.0	  11.0
-tensorflow_gpu-2.3.0	3.5-3.8	          MSVC 2019	   Bazel 3.1.0	  7.6	  10.1   <-- using this setup
-...
-____________________________________________________________________________________
-```
+| Tf version | Python version	|  Compiler	  | Build tools |   cuDNN	|  CUDA  |
+| --- | --- | --- | --- | --- | --- |
+| tensorflow_gpu-2.4.0	 |  3.6-3.8	      |    MSVC 2019	 |  Bazel 3.1.0	 |  8.0	|  11.0 |
+| tensorflow_gpu-2.3.0	 |  3.5-3.8	     |     MSVC 2019	 |  Bazel 3.1.0	 |  7.6	| 10.1 |
+
+**Note**: Despite this table, I had problems with the pre-built `tensorflow 2.3` from conda, so I tried out version 2.4.1 from pip (PyPi) and it works like a charm.
 
 1. download bazel 3.1.0, unzip it to some folder and add it to path (its just one executable)
 https://github.com/bazelbuild/bazel/releases/tag/3.1.0
